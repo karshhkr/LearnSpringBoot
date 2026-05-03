@@ -1,7 +1,19 @@
 package com.LearnSpringBoot.Controller;
 
+import com.LearnSpringBoot.Model.Product;
+import com.LearnSpringBoot.Service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+@RestController
 public class ProductController {
-    public String getProduct(){
-        return "Product is called";
+    @Autowired
+    ProductService service;
+@RequestMapping("/products")
+    public List<Product> getProduct(){
+
+        return service.getProducts();
     }
 }
