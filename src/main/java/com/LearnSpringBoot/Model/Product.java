@@ -2,37 +2,51 @@ package com.LearnSpringBoot.Model;
 
 public class Product {
 
-    private int ProductID;
-    private String ProductName;
-    private int ProductPrice;
+    private int productID;
+    private String productName;
+    private int productPrice;
 
+    // Default Constructor (VERY IMPORTANT)
+    public Product() {
+    }
+
+    // Parameterized Constructor
     public Product(int productID, String productName, int productPrice) {
-        ProductID = productID;
-        ProductName = productName;
-        ProductPrice = productPrice;
+        this.productID = productID;
+        this.productName = productName;
+        this.productPrice = productPrice;
     }
 
     public int getProductID() {
-        return ProductID;
+        return productID;
     }
 
     public void setProductID(int productID) {
-        ProductID = productID;
+        this.productID = productID;
     }
 
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
     public void setProductName(String productName) {
-        ProductName = productName;
+        this.productName = productName;
     }
 
     public int getProductPrice() {
-        return ProductPrice;
+        return productPrice;
     }
 
     public void setProductPrice(int productPrice) {
-        ProductPrice = productPrice;
+        this.productPrice = productPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productID=" + productID +
+                ", productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                '}';
     }
 }
