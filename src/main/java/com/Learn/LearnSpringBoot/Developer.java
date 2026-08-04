@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class Developer {
     @Autowired//Spring se required object ko kisi class me inject karna.
-   private Laptop laptop;
+   private Computer comp;
 
     public void build(){
 
-        laptop.compile();
+        comp.compile();
         System.out.println("working on springboot project ");
     }
 }
